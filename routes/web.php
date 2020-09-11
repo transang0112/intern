@@ -13,12 +13,12 @@ use App\Http\Controllers\CoronavirusCaseController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::resource('coronavirus_cases', 'App\Http\Controllers\CoronavirusCaseController');
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
