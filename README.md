@@ -7,6 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Requirement
+- PHP 7.3+
+- MySQL
+
+## Deployment
+- Clear all cache
+```
+php artisan config:cache
+php artisan route:cache
+php artisan cache:clear
+php artisan view:clear
+```
+
+- Create database on MySQL and migrate (edit .env file on root folder with MySQL configuration)
+```
+php artisan migrate
+```
+
+- Deploy
+```
+php artisan serve
+```
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
