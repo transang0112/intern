@@ -13,9 +13,7 @@ use App\Http\Controllers\CoronavirusCaseController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', '/coronavirus_cases');
 
 Route::resource('coronavirus_cases', 'App\Http\Controllers\CoronavirusCaseController');
 
