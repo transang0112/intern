@@ -179,97 +179,110 @@
         fixedHeader: true,
         //order:[[0, 'asc']], //asc, desc
         lengthMenu: [[10, 25, 50], [10, 25, 50]], //[[10, 25, 50, -1], [10, 25, 50, "All"]]
-        ajax: {
-            url: 'api/coronavirus_cases',
-            type: 'GET',
-            dataSrc: ''
-        },
-        columns: [
-            {
-                render: function ( data, type, full, meta ) {
-                    return  meta.row + 1;
-                }
-            },
-            {
-                data: 'country',
-                defaultContent: '',
-            },
-            {
-                data: 'total_cases',
-                defaultContent: '',
-            },
-            {
-                data: 'new_cases',
-                defaultContent: '',
-            },
-            {
-                data: 'total_deaths',
-                defaultContent: '',
-            },
-            {
-                data: 'new_deaths',
-                defaultContent: '',
-            },
-            {
-                data: 'total_recovered',
-                defaultContent: '',
-            },
-            {
-                data: 'active_cases',
-                defaultContent: '',
-            },
-            {
-                data: 'critical',
-                defaultContent: '',
-            },
-            {
-                data: 'tot_cases',
-                defaultContent: '',
-            },
-            {
-                data: 'deaths',
-                defaultContent: '',
-            },
-            {
-                data: 'total_tests',
-                defaultContent: '',
-            },
-            {
-                data: 'tests',
-                defaultContent: '',
-            },
-            {
-                data: 'population',
-                defaultContent: '',
-            },
-            {
-                visible: false,
-                data: '1_case',
-                defaultContent: '',
-            },
-            {
-                visible: false,
-                data: '1_death',
-                defaultContent: '',
-            },
-            {
-                visible: false,
-                data: '1_test',
-                defaultContent: '',
-            },
-            {
-                orderable: false,
-                render: function (data, type, row, meta) {
-                  return `<a href="/coronavirus_cases/${row.id}/edit" class="btn-sm btn-info">Edit</a>`;
-                }
-            },
-            {
-                orderable: false,
-                render: function (data, type, row, meta) {
-                  return `<a class="btn-sm btn-danger" onclick="remove(\'${row.id}\')">Delete</a>`;
-                }
-            }
+        data: [
+          [1,'USA',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [2,'VIE',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [3,'MYM',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [4,'THAI',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [5,'CHA',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [6,'KOR',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [7,'JPN',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [8,'LAO',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [9,'CAM',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [10,'FRA',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
+          [11,'ENG',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,'',''],
         ]
+        // ajax: {
+        //     url: 'api/coronavirus_cases',
+        //     type: 'GET',
+        //     dataSrc: ''
+        // },
+        // columns: [
+        //     {
+        //         render: function ( data, type, full, meta ) {
+        //             return  meta.row + 1;
+        //         }
+        //     },
+        //     {
+        //         data: 'country',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'total_cases',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'new_cases',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'total_deaths',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'new_deaths',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'total_recovered',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'active_cases',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'critical',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'tot_cases',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'deaths',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'total_tests',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'tests',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         data: 'population',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         visible: false,
+        //         data: '1_case',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         visible: false,
+        //         data: '1_death',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         visible: false,
+        //         data: '1_test',
+        //         defaultContent: '',
+        //     },
+        //     {
+        //         orderable: false,
+        //         render: function (data, type, row, meta) {
+        //           return `<a href="/coronavirus_cases/${row.id}/edit" class="btn-sm btn-info">Edit</a>`;
+        //         }
+        //     },
+        //     {
+        //         orderable: false,
+        //         render: function (data, type, row, meta) {
+        //           return `<a class="btn-sm btn-danger" onclick="remove(\'${row.id}\')">Delete</a>`;
+        //         }
+        //     }
+        // ]
     });
   });
   </script>
